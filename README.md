@@ -13,14 +13,14 @@ NestJS REST API boilerplate for your project ready for production
 
 ## Features
 
-- [ ] Database ([typeorm](https://www.npmjs.com/package/typeorm)).
-- [ ] Config Service ([@nestjs/config](https://www.npmjs.com/package/@nestjs/config)).
-- [ ] Logging in files with log4js ([log4js](https://log4js-node.github.io/log4js-node/)).
-- [ ] Swagger.
-- [ ] E2E and units tests.
-- [x] Logging payload request and response in middleware.
-- [x] JWT Token.
-- [x] RBAC (Role Base Access Control).
+- [x] Database ([typeorm](https://www.npmjs.com/package/typeorm)).
+- [x] Config Service ([@nestjs/config](https://www.npmjs.com/package/@nestjs/config)).
+- [x] Logging in files with log4js ([log4js](https://log4js-node.github.io/log4js-node/)).
+- [x] Swagger.
+- [x] E2E and units tests.
+- [ ] Logger payload request and response in middleware.
+- [ ] JWT Token.
+- [ ] RBAC (Role Base Access Control).
 
 ## Quick run
 
