@@ -1,0 +1,11 @@
+{
+  "name": "restful-api-nest",
+  "script": "./dist/main.js",
+  "watch": false,
+  "instances" : 4,
+  "exec_mode" : "cluster",
+  "env": {
+    "NODE_ENV": "development",
+    "INSTANCES": 3
+  }
+}

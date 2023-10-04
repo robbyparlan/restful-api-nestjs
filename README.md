@@ -3,9 +3,11 @@
 [![NestJs][nestjs-shield]][ref-nestjs]
 [![NodeJs][nodejs-shield]][ref-nodejs]
 [![Typescript][typescript-shield]][ref-typescript]
+[![PM2][pm2-shield]][ref-pm2]
 [![PostgreSQL][postgresql-shield]][ref-postgresql]
 [![JWT][jwt-shield]][ref-jwt]
 [![Jest][jest-shield]][ref-jest]
+
 
 ## Description <!-- omit in toc -->
 
@@ -19,6 +21,7 @@ NestJS REST API boilerplate for your project ready for production
 - [x] Swagger.
 - [x] E2E and units tests.
 - [x] Logger payload request and response in middleware.
+- [x] Clustering with pm2 ([pm2](https://pm2.keymetrics.io/docs/usage/quick-start/)).
 - [ ] JWT Token.
 - [ ] RBAC (Role Base Access Control).
 
@@ -36,6 +39,18 @@ cp env-example .env
 npm install
 
 npm run start:dev
+```
+
+## Build for Production
+
+```bash
+cp pm2.json.example pm2.json
+
+npm install
+
+npm run build
+
+pm2 start pm2.json
 ```
 
 ## Links
@@ -73,6 +88,7 @@ npm run test:e2e
 [postgresql-shield]: https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white
 [jwt-shield]: https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white
 [jest-shield]: https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white
+[pm2-shield]: https://img.shields.io/badge/PM2-2B037A?style=for-the-badge&logo=PM2&logoColor=white
 
 [github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
@@ -84,3 +100,4 @@ npm run test:e2e
 [ref-typescript]: https://www.typescriptlang.org/
 [ref-jwt]: https://jwt.io
 [ref-jest]: https://jestjs.io/docs/getting-started
+[ref-pm2]: https://pm2.keymetrics.io/docs/usage/quick-start/
