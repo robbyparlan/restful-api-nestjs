@@ -3,7 +3,7 @@ import { TestingModule } from './component/testing/testing.module';
 import { ConfigModule } from '@nestjs/config';
 import { validateEnv, Config } from './common';
 import { DatabaseModule } from './common/infra/database/database.module';
-import { LoggerMiddleware } from './middlewares';
+import { RequestLoggerMiddleware, ResponseLoggerMiddleware } from './middlewares';
 
 @Module({
   imports: [
@@ -18,7 +18,7 @@ import { LoggerMiddleware } from './middlewares';
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
-      .apply(LoggerMiddleware)
+      .apply(RequestLoggerMiddleware, ResponseLoggerMiddleware)
       .forRoutes('*');
   }
 }

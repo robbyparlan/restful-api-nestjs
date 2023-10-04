@@ -18,7 +18,7 @@ NestJS REST API boilerplate for your project ready for production
 - [x] Logging in files with log4js ([log4js](https://log4js-node.github.io/log4js-node/)).
 - [x] Swagger.
 - [x] E2E and units tests.
-- [ ] Logger payload request and response in middleware.
+- [x] Logger payload request and response in middleware.
 - [ ] JWT Token.
 - [ ] RBAC (Role Base Access Control).
 
