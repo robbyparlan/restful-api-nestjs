@@ -7,8 +7,8 @@ import * as multiparty from 'multiparty'
 export class RequestLoggerMiddleware implements NestMiddleware {
   
   use(req: Request, res: Response, next: NextFunction) {
-    let logger = new Logger('LoggerMiddleware')
-    let form = new multiparty.Form();
+    const logger = new Logger('LoggerMiddleware')
+    const form = new multiparty.Form();
     form.parse(req, function (err, fields, files) {
       const reqId = Date.now()
       req.headers['request-id'] = reqId.toString()
@@ -26,7 +26,7 @@ export class RequestLoggerMiddleware implements NestMiddleware {
       if (files)
           strLog += ' -- FORM/MULTIPART FILES: ' + JSON.stringify(files);
 
-      let dataLog: string = strLog.length > 2000 ? (strLog.slice(0, 2000)+'--------[TRUNCATED BY LOGGER, ACTUAL BODY LENGTH: ' + strLog.length + ' chars]-------- }') : strLog
+      const dataLog: string = strLog.length > 2000 ? (strLog.slice(0, 2000)+'--------[TRUNCATED BY LOGGER, ACTUAL BODY LENGTH: ' + strLog.length + ' chars]-------- }') : strLog
       logger.log(dataLog)
       
     });

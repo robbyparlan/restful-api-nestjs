@@ -47,4 +47,4 @@ export function ConfigLogger(level: string): Configuration {
       }
     }
   }
-};
+}

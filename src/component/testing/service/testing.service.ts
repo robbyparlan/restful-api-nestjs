@@ -39,11 +39,11 @@ export class TestingService {
       const salt = await bcrypt.genSalt();
       createUserDto.password = await bcrypt.hash(createUserDto.password, salt);
 
-      let create = await this.userEntity.create(createUserDto)
+      const create = await this.userEntity.create(createUserDto)
       
       await trx.manager.save(create);
       
-      let response: ServiceResponse = {
+      const response: ServiceResponse = {
         success: true,
         message: 'Data Berhasil disimpan'
       }
